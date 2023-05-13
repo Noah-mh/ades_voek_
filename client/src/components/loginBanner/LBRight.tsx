@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "../../api/axios";
 import { AxiosResponse } from 'axios'
-import { Link } from "react-router-dom";
 import "./LBRight.css";
+import { Link } from "react-router-dom";
 
 interface props {
   setLogin: React.Dispatch<React.SetStateAction<boolean>>
@@ -80,6 +80,7 @@ const LBRight =  ({ setLogin, setUserDetails }: props): JSX.Element => {
         </div>
         {/* change to link create route for this */}
         <p>Forget Password</p>
+        <Link to='/signup'>Sign Up</Link>
         <p>{errMsg}</p>
         <input disabled={disabled} type="submit" value="LOG IN" className="submitLogin" />
       </form>

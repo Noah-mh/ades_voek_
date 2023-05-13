@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "./signUP.css";
 import loginPhoto from "../../img/login/loginVec.png";
-import OTP from "./OTP.tsx"
+import OTP from "./OTP.tsx";
 import "./loginBanner.css";
 import LBRight from "./LBRight.tsx";
 

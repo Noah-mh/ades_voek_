@@ -1,11 +1,11 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
-import useCustomer from "../../hooks/UseCustomer";
+import useCustomer from "../../hooks/useCustomer.js";
 import jwt_decode, { JwtPayload } from "jwt-decode";
 
 interface DecodedToken extends JwtPayload {
     UserInfo: {
         role: string;
-        // Add other properties if available
+        customer_id: string;
     };
 }
 
@@ -17,7 +17,7 @@ const RequireAuthCustomer = () => {
     return (
         decoded?.UserInfo.role === 'customer'
             ? <Outlet />
-            : customer?.username
+            : customer?.accessToken
                 ? <Navigate to='unauthorized' state={{ from: location }} replace />
                 : <Navigate to='/login' state={{ from: location }} replace />
     )

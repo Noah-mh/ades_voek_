@@ -1,17 +1,15 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../header/header';
-import Footer from '../footer/footer';
-import Elliott from '../Elliott';
+import Header from '../header/header.js';
+import Footer from '../footer/footer.js';
 
 const Layout = () => {
-    return (
-        <main className='App'>
-            <Header />
-            <Elliott />
-            <Outlet />
-            <Footer />
-        </main>
-    )
-}
+  return (
+    <main className="App">
+      <Header />
+      <Outlet />
+      <Footer />
+    </main>
+  );
+};
 
 export default Layout;
